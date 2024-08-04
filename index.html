@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="logo1.jpg" alt="Company Logo">
+            <div>Rescue Bites</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container" id="form-container">
+            <!-- Login Form -->
+            <div class="form-box login-box">
+                <h2>Login</h2>
+                <form id="login-form" action="/login" method="post">
+                    <div class="input-group">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" name="email" required aria-label="Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="password" required aria-label="Password">
+                    </div>
+                    <button type="submit" aria-label="Login">Login</button>
+                </form>
+                <p class="switch-form">Don't have an account? <a href="#" id="to-signup">Sign up here</a></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-box signup-box" style="display: none;">
+                <h2>Sign Up</h2>
+                <form action="/signup" method="post">
+                    <div class="input-group">
+                        <label for="signup-name">Name:</label>
+                        <input type="text" id="signup-name" name="name" required aria-label="Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-email">Email:</label>
+                        <input type="email" id="signup-email" name="email" required aria-label="Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-phone">Phone Number:</label>
+                        <input type="tel" id="signup-phone" name="phone" required aria-label="Phone Number">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Create Password:</label>
+                        <input type="password" id="signup-password" name="password" required aria-label="Create Password">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-confirm-password">Confirm Password:</label>
+                        <input type="password" id="signup-confirm-password" name="confirm-password" required aria-label="Confirm Password">
+                    </div>
+                    <button type="submit" aria-label="Sign Up">Sign Up</button>
+                </form>
+                <p class="switch-form">Already have an account? <a href="#" id="to-login">Login here</a></p>
+            </div>
+        </div>
+
+        <!-- Main Content (hidden initially) -->
+        <div id="main-content" style="display: none;">
+            <h1>Welcome to the Home Page!</h1>
+            <!-- Add your main content here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
